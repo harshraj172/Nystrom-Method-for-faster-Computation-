@@ -1,1 +1,1 @@
-# Spectral-Clustering---Nystrom-Method-for-fatser-Computation-
+Nystrom-Method-for-faster-Computation
