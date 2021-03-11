@@ -1,4 +1,4 @@
-Nystrom-Method-for-faster-Computation
+Nystrom Method for faster Computation
 
 The purpose of Nystrom method is to improve the time complexity in matrix creation.
 
