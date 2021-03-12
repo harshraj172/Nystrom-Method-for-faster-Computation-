@@ -28,7 +28,8 @@ rand_X = []
 for i in rand_idx:
   rand_X.append(X[i])
 
-P = kneighbors_graph(rand_X, n_neighbors=5).toarray()
+numedge = 7
+P = kneighbors_graph(rand_X, n_neighbors=numedge).toarray()
 
 """#Reference Point Matrix(R & R'):
 
@@ -37,16 +38,16 @@ P = kneighbors_graph(rand_X, n_neighbors=5).toarray()
 import numpy as np
 from scipy.spatial import distance 
 
-k = 9401
-R = np.zeros((9400,88714))
-R.shape
+R = np.zeros((9400,len(idx)))
+lenedge = 8
 
 for i in rand_idx:
+  k = 9400
   for j in idx:
-    if distance.euclidean(X[i], X[j]) < 5:
+    if distance.euclidean(X[i], X[j]) < lenedge:
       R[i][k] = 1
     else:
-      R[i][j] = 0
+      R[i][k] = 0
     k += 1
 
 RT = numpy.transpose(R)
